@@ -17,7 +17,7 @@
 
 window.findNRooksSolution = function(n) {
   var solution = []; //fixme
-  var start = Math.floor(Math.random() * n);
+  var start = 0;
   var curr = new Array(n).fill(0);
   for (var i = 0; i < n; i++) {
     curr[start] = 1;
