@@ -149,9 +149,9 @@
         while (numberOfTest > 0) {
           for (var i = length - numberOfTest - 1; i < length; i++, colIdx++) {
             count += this.rows()[i][colIdx];
-          if (count > 1) {
-            return true;
-          }
+            if (count > 1) {
+              return true;
+            }
             
             
             
