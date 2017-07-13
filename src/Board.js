@@ -149,11 +149,11 @@
         while (numberOfTest > 0) {
           for (var i = length - numberOfTest - 1; i < length; i++, colIdx++) {
             count += this.rows()[i][colIdx];
+          if (count > 1) {
+            return true;
+          }
             
             
-            if (count > 1) {
-              return true;
-            }
             
             if (colIdx > length - 1) {
               break;
@@ -167,7 +167,8 @@
       } else { 
         var j = 0;
         
-        while (colIdx < length) {
+        while (colIdx < length && colIdx>-1) {
+          
           count += this.rows()[j][colIdx];
           colIdx++;
           j++;
@@ -222,7 +223,7 @@
           numoftest --;
           colidx = minorDiagonalColumnIndexAtFirstRow;
         } 
-      }else {
+      } else {
         
         for (var i = 0; i < length; i ++, colidx --) {
           if (colidx > -1) {
